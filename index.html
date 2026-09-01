@@ -151,6 +151,7 @@
       margin-right: 6px;
     }
 
+    /* Gallery Styling */
     .gallery-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -162,7 +163,7 @@
       border-radius: 12px;
       overflow: hidden;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-      border: 1px solid #f0f0f0;
+      border: 1px solid #e2e8f0;
       text-align: center;
       cursor: pointer;
       transition: transform 0.2s, box-shadow 0.2s;
@@ -171,17 +172,18 @@
       transform: translateY(-2px);
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     }
-    .gallery-card img {
+    .gallery-card svg {
       width: 100%;
-      height: 130px;
-      object-fit: cover;
+      height: 120px;
       display: block;
     }
     .gallery-title {
       font-size: 12px;
       font-weight: 600;
       padding: 8px 4px;
-      color: #333333;
+      color: #1e293b;
+      background: #f8fafc;
+      border-top: 1px solid #f1f5f9;
     }
 
     .lightbox-modal {
@@ -201,7 +203,6 @@
       max-width: 90%;
       max-height: 85vh;
       border-radius: 8px;
-      object-fit: contain;
     }
     .lightbox-close {
       position: absolute;
@@ -340,23 +341,52 @@
       <h3 class="section-title">Our Work Gallery</h3>
       <div class="gallery-grid">
         
-        <div class="gallery-card" onclick="openLightbox('https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=600&q=80')">
-          <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=600&q=80" alt="Transformer Repair">
+        <div class="gallery-card">
+          <svg viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg">
+            <rect width="200" height="140" fill="#1e293b"/>
+            <rect x="50" y="45" width="100" height="65" rx="6" fill="#475569"/>
+            <rect x="65" y="55" width="70" height="45" fill="#334155"/>
+            <circle cx="75" cy="30" r="7" fill="#f59e0b"/>
+            <circle cx="100" cy="30" r="7" fill="#f59e0b"/>
+            <circle cx="125" cy="30" r="7" fill="#f59e0b"/>
+            <path d="M75 37 L75 45 M100 37 L100 45 M125 37 L125 45" stroke="#94a3b8" stroke-width="4"/>
+            <path d="M98 62 L92 75 L102 75 L96 90" stroke="#facc15" stroke-width="3" fill="none" stroke-linejoin="round"/>
+          </svg>
           <div class="gallery-title">Transformer Repair</div>
         </div>
 
-        <div class="gallery-card" onclick="openLightbox('https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80')">
-          <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80" alt="DP Servicing">
+        <div class="gallery-card">
+          <svg viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg">
+            <rect width="200" height="140" fill="#0f172a"/>
+            <rect x="40" y="35" width="120" height="75" rx="8" fill="#1e3a8a"/>
+            <circle cx="100" cy="72" r="24" fill="#3b82f6"/>
+            <path d="M100 58 L100 86 M86 72 L114 72" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
+            <circle cx="60" cy="50" r="5" fill="#22c55e"/>
+            <circle cx="140" cy="50" r="5" fill="#ef4444"/>
+          </svg>
           <div class="gallery-title">DP Servicing</div>
         </div>
 
-        <div class="gallery-card" onclick="openLightbox('https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=600&q=80')">
-          <img src="https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=600&q=80" alt="Testing Setup">
+        <div class="gallery-card">
+          <svg viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg">
+            <rect width="200" height="140" fill="#182234"/>
+            <rect x="45" y="30" width="110" height="85" rx="6" fill="#334155"/>
+            <rect x="60" y="42" width="80" height="35" rx="4" fill="#0284c7"/>
+            <text x="100" y="66" fill="#ffffff" font-size="14" font-weight="bold" text-anchor="middle" font-family="sans-serif">415 V</text>
+            <circle cx="80" cy="95" r="8" fill="#e2e8f0"/>
+            <circle cx="120" cy="95" r="8" fill="#e2e8f0"/>
+          </svg>
           <div class="gallery-title">Testing Setup</div>
         </div>
 
-        <div class="gallery-card" onclick="openLightbox('https://images.unsplash.com/photo-1504917599217-d4dc5ebe6122?auto=format&fit=crop&w=600&q=80')">
-          <img src="https://images.unsplash.com/photo-1504917599217-d4dc5ebe6122?auto=format&fit=crop&w=600&q=80" alt="Workshop Site">
+        <div class="gallery-card">
+          <svg viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg">
+            <rect width="200" height="140" fill="#1e293b"/>
+            <path d="M30 110 L30 65 L65 85 L65 50 L105 75 L105 40 L170 80 L170 110 Z" fill="#475569"/>
+            <rect x="45" y="85" width="14" height="25" fill="#93c5fd"/>
+            <rect x="80" y="85" width="14" height="25" fill="#93c5fd"/>
+            <rect x="120" y="85" width="14" height="25" fill="#93c5fd"/>
+          </svg>
           <div class="gallery-title">Workshop Unit</div>
         </div>
 
@@ -392,24 +422,6 @@
     </div>
 
   </div>
-
-  <div id="lightbox" class="lightbox-modal" onclick="closeLightbox()">
-    <span class="lightbox-close">×</span>
-    <img id="lightbox-img" class="lightbox-content" src="" alt="Zoomed Work">
-  </div>
-
-  <script>
-    function openLightbox(imageSrc) {
-      const lightbox = document.getElementById('lightbox');
-      const lightboxImg = document.getElementById('lightbox-img');
-      lightboxImg.src = imageSrc;
-      lightbox.style.display = 'flex';
-    }
-
-    function closeLightbox() {
-      document.getElementById('lightbox').style.display = 'none';
-    }
-  </script>
 
 </body>
 </html>
